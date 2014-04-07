@@ -1,0 +1,60 @@
+{
+    "global": {
+        "title": "<%= baseName %>",
+        "browsehappy": "Vous utilisez un <strong>ancien</strong> navigateur. Veuillez <a href=\"http://browsehappy.com/\">mettre à jour votre navigateur</a> pour une meilleure expérience.",
+        "menu": {
+            "home": "Accueil",
+            "account": {
+                "main": "Compte",
+                "profil": "Profil",
+                "password": "Mot de passe",
+                "login": "S'authentifier",
+                "logout": "Déconnexion"
+            },
+            "language": "Langue"
+        },
+        "language": {
+            "en": "Anglais",
+            "fr": "Français"
+        }
+    },
+    "index": {
+        "title": "index"
+    },
+    "main": {
+        "title": "Bienvenue, <%= baseName %>!",
+        "subtitle": "Ceci est votre page d'accueil",
+        "logged": {
+            "message": "Vous êtes connecté en tant que \"{{username}}\".",
+            "authenticated": "Si vous voulez vous <a href=\"#/login\">connecter</a>, vous pouvez utiliser les identifiants par défaut : <br/> nom d'utilisateur=\"admin\" et mot de passe =\"admin\"."
+        }
+    },
+    "login": {
+        "title": "S'authentifier",
+        "form": {
+            "username": "Nom d'utilisateur",
+            "username.placeholder": "Votre nom d'utilisateur",
+            "password": "Mot de passe",
+            "password.placeholder": "Votre mot de passe",
+            "rememberme": "Garder ma connexion ouverte",
+            "button": "Connexion"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Erreur d'authentification!</strong> Veuillez vérifier vos identifiants de connexion."
+            }
+        }
+    },
+    "settings": {
+        "title": "Profil de l'utilisateur [{{username}}]",
+        "form": {
+            "firstname": "Prénom",
+            "firstname.placeholder": "Votre prénom",
+            "lastname": "Nom",
+            "lastname.placeholder": "Votre nom",
+            "email": "Email",
+            "email.placeholder": "Votre email"
+        }
+    },    
+    "footer": "Ceci est votre pied de page"
+}

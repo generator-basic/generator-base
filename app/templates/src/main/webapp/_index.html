@@ -1,0 +1,76 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><%= baseName %></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="resources/styles/bootstrap.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="<%= angularAppName %>">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-home"></span>
+                            <span translate="global.menu.home">Home</span>
+                        </a>
+                    </li>
+                    <li class="dropdown pointer">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <span>
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span class="hidden-tablet" translate="global.menu.account.main">
+                                    Account
+                                </span>
+                                <b class="caret"></b>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu" ng-controller="MenuController">
+                            <li ng-show="authenticated"><a href="#/profil"><span class="glyphicon glyphicon-wrench"></span>
+                                &nbsp;<span translate="global.menu.account.profil">Settings</span></a></li>
+                            <li ng-show="authenticated"><a href="#/logout"><span class="glyphicon glyphicon-log-out"></span>
+                                &nbsp;<span translate="global.menu.account.logout">Log out</span></a></li>
+                            <li ng-hide="authenticated"><a href="#/login"><span class="glyphicon glyphicon-log-in"></span>
+                                &nbsp;<span translate="global.menu.account.login">Authenticate</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown pointer" ng-controller="LanguageController">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <span>
+                                <span class="glyphicon glyphicon-flag"></span>
+                                <span class="hidden-tablet" translate="global.menu.language">Language</span>
+                                <b class="caret"></b>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li active-menu="en"><a href="#" ng-click="changeLanguage(&apos;en&apos;)" translate="global.language.en">English</a></li>
+                            <li active-menu="fr"><a href="#" ng-click="changeLanguage(&apos;fr&apos;)" translate="global.language.fr">French</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 class="text-muted"><%=baseName%></h3>
+            </div>
+
+
+            <div class="well" ng-view></div>
+
+            <div class="footer">
+                <p translate="footer">This is your footer</p>
+            </div>
+
+        </div>
+    </body>
+</html>
